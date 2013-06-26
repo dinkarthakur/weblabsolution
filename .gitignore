@@ -14,3 +14,15 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+*.ids
+
+*.xml
+
+.idea/dataSources.xml
+
+.idea/workspace.xml
+
+.idea/workspace.xml
+
+app/assets/javascripts/home/home.js.coffee
