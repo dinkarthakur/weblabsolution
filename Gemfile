@@ -28,9 +28,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Add Foundation Here
-gem 'zurb-foundation'
+gem 'zurb-foundation', '~> 4.2.3'
 
+# Add gzip for heroku
 gem 'heroku-deflater', :group => :production
+
+# Add google map
+# gem 'gmaps4rails'
+# gem 'polylines'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
