@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 1.2'
 # Add Foundation Here
 gem 'zurb-foundation', '~> 4.0.0'
 
+gem 'heroku-deflater', :group => :production
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -28,3 +28,7 @@
 app/assets/javascripts/home/home.js.coffee
 
 .idea/workspace.xml
+
+*.txt
+
+*.iml
