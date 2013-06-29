@@ -28,7 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Add Foundation Here
-gem 'zurb-foundation', '~> 4.0.0'
+gem 'zurb-foundation'
 
 gem 'heroku-deflater', :group => :production
 
