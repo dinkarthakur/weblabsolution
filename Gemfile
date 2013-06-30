@@ -33,6 +33,9 @@ gem 'zurb-foundation', '~> 4.2.3'
 # Add gzip for heroku
 gem 'heroku-deflater', :group => :production
 
+# new relic tracking gem heroku app
+gem 'newrelic_rpm'
+
 # Add google map
 # gem 'gmaps4rails'
 # gem 'polylines'
