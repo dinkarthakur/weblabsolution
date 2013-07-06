@@ -79,12 +79,12 @@ Weblabsolution::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-    address:              'smtp.sendgrid.net',
-    port:                 587,
-    domain:               'weblabsolution.com',
-    user_name:            'app15771907@heroku.com',
-    password:             'Palampur@1',
-    authentication:       'plain',
-    enable_starttls_auto: true
+  :user_name => 'app15771907@heroku.com',
+  :password => 'Palampur@1',
+  :domain => 'weblabsolution.com',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
     }
 end
