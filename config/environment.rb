@@ -4,10 +4,10 @@ require File.expand_path('../application', __FILE__)
 # Initialize the Rails application.
 Weblabsolution::Application.initialize!
 ActionMailer::Base.smtp_settings = {
-  :user_name => 'app15771907@heroku.com',
-  :password => 'Palampur@1',
+  :user_name => 'thakur.dinkar@gmail.com',
+  :password => 'qmipillnbsunnskm',
   :domain => 'weblabsolution.com',
-  :address => 'smtp.sendgrid.net',
+  :address => 'smtp.gmail.com',
   :port => 587,
   :authentication => :plain,
   :enable_starttls_auto => true
