@@ -32,3 +32,5 @@ app/assets/javascripts/home/home.js.coffee
 *.txt
 
 *.iml
+
+*.properties
