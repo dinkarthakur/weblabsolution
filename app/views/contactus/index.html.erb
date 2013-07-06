@@ -2,8 +2,27 @@
 
 <!-- Main Page Content and Sidebar -->
 
-<div class="row">
 
+
+<div class="row">
+<div data-alert>
+  <!-- Your content goes here -->
+  <% if flash[:notice] %>
+    <%= content_tag :div, :id => "flash_name", :class => "alert-box success" do %>
+      <%= flash[:notice] %>
+        <a href="#" class="close">&times;</a>
+    <% end %>
+  <% end %>
+
+  <% if flash[:error] %>
+    <%= content_tag :div, :id => "flash_name", :class => "alert-box alert" do %>
+      <%= flash[:error] %>
+        <a href="#" class="close">&times;</a>
+      <% end %>
+  <% end %>
+
+
+</div>
   <!-- Contact Details -->
   <div class="large-9 columns">
 
@@ -14,27 +33,34 @@
       <section class="section">
         <h5 class="title"><a href="#panel1">Contact Our Company</a></h5>
         <div class="content" data-slug="panel1">
-          <form>
+          <%= form_for @contact_us, :url => contactus_path(@contact_us) do |f| %>
+            <% if @contact_us.errors.any? %>
+              <ul>
+                  <% @contact_us.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                  <% end %>
+              </ul>
+            <% end %>
             <div class="row collapse">
               <div class="large-2 columns">
-                <label class="inline">Your Name</label>
+                <%= f.label :name, "Your Name",class: "inline" %>
               </div>
               <div class="large-10 columns">
-                <input type="text" id="yourName" placeholder="Jane Smith">
+                <%= f.text_field :name, placeholder: "Jane Smith" %>
               </div>
             </div>
             <div class="row collapse">
               <div class="large-2 columns">
-                <label class="inline"> Your Email</label>
+                <%= f.label :email, "Your Email", class: "inline" %>
               </div>
               <div class="large-10 columns">
-                <input type="text" id="yourEmail" placeholder="jane@smithco.com">
+                <%= f.text_field :email, placeholder: "jane@smithco.com" %>
               </div>
             </div>
-            <label>What's up?</label>
-            <textarea rows="4"></textarea>
-            <button type="submit" class="radius button">Submit</button>
-          </form>
+            <%= f.label :message, "What's up?" %>
+            <%= f.text_area :message, row: "4" %>
+            <%= f.submit "Submit", class: "radius button" %>
+          <% end %>
         </div>
       </section>
       <section class="section">

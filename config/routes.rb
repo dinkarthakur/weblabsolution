@@ -1,5 +1,14 @@
 Weblabsolution::Application.routes.draw do
   root :to => 'home#index'
+
+  resources :inquiries, :only => [:new, :create] do
+    get 'thank_you', :on => :collection
+  end
+
+  resources :contactus, :only => [:new, :create] do
+    get 'thank_you', :on => :collection
+  end
+
   #get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -41,7 +50,7 @@ Weblabsolution::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
