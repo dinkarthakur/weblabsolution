@@ -81,7 +81,7 @@ Weblabsolution::Application.configure do
     config.action_mailer.smtp_settings = {
     address:              'smtp.sendgrid.net',
     port:                 587,
-    domain:               'thakur.dinkar@gmail.com',
+    domain:               'weblabsolution.com',
     user_name:            'app15771907@heroku.com',
     password:             'Palampur@1',
     authentication:       'plain',
